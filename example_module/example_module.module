@@ -1,0 +1,30 @@
+<?php
+use Drupal\views\ViewExecutable;
+function example_module_theme($existing, $type, $theme, $path) {
+  global $base_url;
+  return [
+    'example_module' => [ // key name template here
+      'template' => 'template1', //Twig file without html.twig
+      'path' => $path . '/templates',
+      'variables' => [
+        'module_url' => $base_url.'/'.$path ,
+        'site_url' => $base_url ,
+        'moduleVar' => 'PROCESS_IN_CONTROLLER',
+      ],
+      'metaOgTitle' => 'Example module using twig ',
+      'metaOgDescription' => 'Example',
+      'metaKeywords' => '',
+      'metaSiteName' => 'vulieumang@gmail.com',
+      'metaUrl' => '',
+      'register_title' => '',
+      'facebook_pixcel_no_script' => '',
+      'fanpage_name' => '',
+      'fanpage_link' => '',
+      'date_of_week' => '5',
+    ],
+    '#cache' => [
+      'max-age' => 0
+    ],
+  ];
+}
+

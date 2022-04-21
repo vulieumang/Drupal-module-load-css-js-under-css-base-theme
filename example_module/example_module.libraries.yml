@@ -1,0 +1,11 @@
+global:
+  version: 1.0
+  css:
+    theme:
+      css/example-module-css.css: {weight: 200}
+  js:
+    //cdn.jsdelivr.net/npm/axios/dist/axios.min.js : { type: external, minified: true }
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js : { type: external, minified: true }
+    //cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js : { type: external, minified: true }
+    js/example-module-js.js: {}
+    

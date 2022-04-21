@@ -1,0 +1,9 @@
+example_module.example:
+  path: '/example-module'
+  defaults:
+    _controller: '\Drupal\example_module\Controller\ExampleModuleController::build'
+    _title: 'ExampleModule'
+  options:
+    no_cache: 'TRUE'
+  requirements: 
+    _permission: 'access content'
