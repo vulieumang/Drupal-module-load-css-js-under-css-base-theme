@@ -5,6 +5,7 @@ load css js in module under css base theme and using dynamic cache when change c
 
 ![alt text](screen.png)
 
+use: copy folder example_module in this repo and paste to modules/custom/[this_module]
 
 ===
 
