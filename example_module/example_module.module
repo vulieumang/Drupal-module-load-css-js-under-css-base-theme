@@ -28,3 +28,18 @@ function example_module_theme($existing, $type, $theme, $path) {
   ];
 }
 
+
+function example_module_preprocess(&$variables) {
+  // $variables["tarot_module_global_var"] = 'global variable from tarot module';
+  global $isExampleModulePage ;
+  $isExampleModulePage = false;
+  $currentPath = \Drupal::service('path.current')->getPath(); // /tarotcaphe/share
+  if($currentPath=='/example-module') $isExampleModulePage = true;
+}
+
+// Unset js in module page, css is example_module_css_alter
+function example_module_js_alter(&$javascript) {
+  global $isExampleModulePage;
+  if(!$isExampleModulePage)return;
+  unset($javascript['themes/custom/abc.js']);
+}
