@@ -1,3 +1,5 @@
+#update:5/2022
+có thể sử dụng hàm [module_name]_js_alter và [module_name]_css_alter để loại bỏ js, css ko muốn load vào page
 # Drupal module load css js under css base theme
  Drupal example module load css js under css base theme - drupal 8 9
 
